@@ -1,17 +1,49 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Page from '@components/page'
+import Link from '@components/link'
+import Spotify from '@components/spotify/now-listening'
 
-export default function Home() {
+const Index = () => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Shehroz's blog - Shehroz's coding journey</title>
-        <meta name="description" content="Shehroz's coding journey - programming, working and life stories through the keyboard of an open minded Software Engineer" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <header className='header'>
-        <h1>The blog is in the process of coding</h1>
-      </header>
-    </div>
+    <Page description="Hi, I'm Yuri. Senior Dorito Enjoyer, Linux enthusiast, practicing minimalist, and electronic lover in search of good dota team without aggressive russian kids.">
+      <article>
+        <h1 className="hero">Shehroz (GreatBits)</h1>
+
+        <p>
+          Senior Dorito Enjoyer,{' '}
+          <Link underline href="/keyboards">
+            keyboard
+          </Link>{' '}
+          enthusiast, practicing minimalist, and{' '}
+          <Link underline href="/music">
+            electronic lover
+          </Link>{' '}
+          in search of good Rust macro.{' '}
+          <Link underline href="/blog">
+            Writing
+          </Link>{' '}
+          about my coding style and some extra shit.
+        </p>
+
+        <p>
+          Working at{' '}
+          <Link underline href="https://uzinfocom.uz/uz/" external>
+            Uzinfocom
+          </Link>{' '}
+          to make Uzbekistan more survivable. Mostly, I maintain{' '}
+          <Link underline href="https://github.com/uzinfocom-org" external>
+            Uzinfocom Open Source Organization.
+          </Link>
+        </p>
+
+        <p align="center">
+          ⌘K or Alt+K to let the dark magic happen or press the ⌘ button on
+          navigation menu...
+        </p>
+
+        <Spotify />
+      </article>
+    </Page>
   )
 }
+
+export default Index
